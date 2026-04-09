@@ -1,0 +1,313 @@
+/* 🌍 RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌈 BODY */
+body {
+  font-family: Arial, sans-serif;
+  color: #f8fafc;
+  text-align: center;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+/* 🎬 LOGIN BACKGROUND */
+.login-bg {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  background: url("./assets/tom-and-jerry.jpg") no-repeat center center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌑 OVERLAY */
+.login-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* 🧾 LOGIN BOX */
+.auth-container {
+  position: relative;
+  z-index: 2;
+
+  width: 350px;
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 20px; 
+
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+/* INPUTS */
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* BUTTON */
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.new-user {
+  margin-top: 10px;
+}
+
+.auth-container button:hover {
+  background: #334155;
+}
+
+/* ================= DASHBOARD ================= */
+
+/* 🎬 DASHBOARD BACKGROUND */
+.dashboard {
+  min-height: 100vh;
+  position: relative;
+
+  background: url("./assets/BG for dashboard.jpg") no-repeat center center;
+  background-size: cover;
+
+  padding: 40px 20px;
+}
+
+/* 🌑 OVERLAY */
+.dashboard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* 🔥 KEEP CONTENT ABOVE OVERLAY */
+.dashboard * {
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADER */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard h1 {
+  color: #38bdf8;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #334155;
+}
+
+/* GRID */
+.cartoon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.cartoon-card {
+  background: rgba(30, 41, 59, 0.9); /* 🔥 FIX transparency */
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cartoon-card:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGE */
+.cartoon-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TEXT FIX */
+.cartoon-card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #facc15;
+  word-wrap: break-word;
+}
+
+.cartoon-card p {
+  font-size: 13px;
+  color: #e2e8f0;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* ================= ANIMATION ================= */
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🎬 LANDING BACKGROUND */
+.landing-bg {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  background: url("./assets/landingpage.jpg") no-repeat center center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌑 OVERLAY */
+.landing-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* 📦 LANDING CONTENT BOX */
+.landing {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  padding: 40px;
+  border-radius: 12px;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+/* INPUT */
+.landing input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* BUTTON */
+.landing button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.landing button:hover {
+  background: #2563eb;
+}
+
+.show-page {
+  padding: 50px 20px;
+  max-width: 700px;
+  margin: auto;
+
+  background: rgba(0, 0, 0, 0.7);  /* ✅ DARK BACKGROUND */
+  border-radius: 12px;
+}
+.show-page {
+  padding: 50px 20px;
+  max-width: 700px;
+  margin: auto;
+
+  background: rgba(0, 0, 0, 0.7);  /* ✅ DARK BACKGROUND */
+  border-radius: 12px;
+}
+
+/* 🎬 SHOW PAGE BACKGROUND */
+.show-bg {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+
+  background: url("/assets/showpage.webp") no-repeat center center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌑 OVERLAY */
+.show-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* 🔥 KEEP CONTENT ABOVE OVERLAY */
+.show-page {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  background: rgba(30, 41, 59, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  color: #f8fafc;
+  text-align: center;
+}
+
+
