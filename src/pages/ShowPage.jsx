@@ -8,7 +8,7 @@ function ShowPage() {
   const [show, setShow] = useState(null);
 
   useEffect(() => {
-    fetch(`https://mern-final-project-onqx.onrender.com/api/cartoons/${id}`)
+    fetch(`https://mern-final-project-onqx.onrender.com/api/cartoons/api/cartoons/${id}`)
       .then(res => res.json())
       .then(data => setShow(data))
       .catch(err => console.error(err));
@@ -17,7 +17,7 @@ function ShowPage() {
   // ⭐ ADD FUNCTION HERE
   const toggleFavorite = async (id) => {
     try {
-      const res = await fetch(`https://mern-final-project-onqx.onrender.com/api/cartoons/${id}`, { // ⚠️ FIX PORT
+      const res = await fetch(`https://mern-final-project-onqx.onrender.com/api/cartoons/api/cartoons/${id}`, { // ⚠️ FIX PORT
         method: "POST",
       });
 

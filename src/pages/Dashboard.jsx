@@ -46,7 +46,7 @@ function Dashboard() {
   
   const toggleFavorite = async (id) => {
     try {
-      const res = await fetch(`https://mern-final-project-onqx.onrender.com/favorites/${id}`, {
+      const res = await fetch(`https://mern-final-project-onqx.onrender.com/api/cartoons/favorites/${id}`, {
         method: "POST",
       });
 
